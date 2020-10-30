@@ -13,9 +13,13 @@ def updateTik(host, user, passw, rules):
     with open(rules, 'r') as rulefile:
         rule = rulefile.readlines()
         for i in rule:
-            i = str(i)
-            stdin, stdout, stderr = client.exec_command(f"ip firewall filter {i}")
-            print(f"[*] Adding {i}")
+            try:
+                i = str(i)
+                stdin, stdout, stderr = client.exec_command(f"ip firewall filter {i}")
+                print(f"[*] Adding {i}")
+            except:
+                print(stderr.readlines())
+                pass
     print("[*] Done")
     print("[*] Closing connection")
     stdin.close()
