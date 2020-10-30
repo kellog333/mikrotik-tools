@@ -2,7 +2,17 @@
 
 A collection of Mikrotik mass update tools
 
-Only one so far...Working on more.
+usage: mikrotikfilter.py [-h] [-u USERNAME] [-p PASSWORD] [-t TIKS] [-r RULES]
+
+Mass update firewall filter rules on Mikrotik devices
+
+optional arguments:
+  -h, --help   show this help message and exit
+  -u USERNAME  Username of devices
+  -p PASSWORD  Password of devices
+  -t TIKS      List of Mikrotik devices
+  -r RULES     List of rules
+
 
 usage: mikrotiksnmp.py [-h] [-u USERNAME] [-p PASSWORD] [-f FILE]
                        [-c COMMUNITY]
